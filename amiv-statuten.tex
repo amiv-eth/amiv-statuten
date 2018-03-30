@@ -1,0 +1,563 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Statuten des AMIV
+% Datum: 30. November 2015
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Revision History (nicht inhaltlich, nur zur Formatierung)
+% 2013-12-23 '0 und 'S Befehle für die Absatznummerierung eingefügt, \nl Befehl eingefügt (1.5 Zeilen-Absatz) um unnötige \enumerates zu vermeiden, automatische Paragraphennummerierung eingeführt mit dynamischen Verweisen und Paragraphenzeichen
+% Abschaffung der Neunummerierung der Paragraphen für die jeweiligen Anhänge, da dies beim Zitieren der Statuten nur verwirrt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ae}
+\usepackage[german]{babel}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage[hidelinks]{hyperref}
+
+
+\addtolength{\textheight}{1.5cm}
+\pagestyle{plain}
+
+\title{\includegraphics[scale=1.5]{amiv-logo.eps} \\\vspace{1.8cm} Statuten des AMIV}
+\date{September 2017}
+
+
+% Paragrapheinzug ausschalten
+\setlength{\parindent}{0pt}
+
+% Automatische Nummerierung der Artikel
+% \S setzt das Paragraphenzeichen
+\usepackage{chngcntr}
+\counterwithout{paragraph}{subsubsection}
+\renewcommand{\theparagraph}{\S\ \arabic{paragraph}}
+\setcounter{secnumdepth}{4}
+
+% Hindert LaTex am Setzen des Tabulators nach dem Paragraphentitel
+%\usepackage{titlesec}
+%\titleformat{\paragraph}[runin]{\normalfont\bfseries}{\theparagraph}{\wordsep}{}
+%\titlespacing{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{\wordsep}
+
+% Referenzierung auf Paragraphen: Benutze NIE eine Paragraphennummer. Verweise immer mit \ref auf ein spezifisches Label. Wenn nötig, musst du ein neues Label setzen mit \label{Paragraphenname}
+
+
+% Benutze Counter für die Absatznummerierung. Müssen verschiedene Absätze mit Ziffern versehen werden, geht dies über '0 (text) für den ersten Absatz und 'S für die folgende Absätze. Folgende Zeilen definieren diese zwei Befehle
+\newcounter{SentenceNumber}
+\newcommand*{\ShowSentenceNumber}{\stepcounter{SentenceNumber}%
+  \textsuperscript{\theSentenceNumber}}
+% Ab hier wird babel benötigt:
+\useshorthands{'}
+\defineshorthand{'S}{\ShowSentenceNumber\ignorespaces}
+\defineshorthand{'0}{\setcounter{SentenceNumber}{0}%
+  \ShowSentenceNumber\ignorespaces}
+
+\newcommand{\nl}{\\[1.5ex]}
+
+
+\begin{document}
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acronyms
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\ITET}{\href{http://www.ee.ethz.ch/}{``Informationstechnologie und Elektrotechnik''}}
+\newcommand{\MAVT}{\href{http://www.mavt.ethz.ch/}{``Maschinenbau und Verfahrenstechnik''}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Beginn des eigentlichen Dokumentes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Name und Zweck des Vereins}
+
+Weibliche und männliche Bezeichnungen werden im Folgenden synonym verwendet.
+
+% \setcounter{secnumdepth}{5}
+\paragraph{Name und Sitz} \ \\
+Der AMIV (Akademischer Maschinen- und Elektroingenieur Verein an der Eidgenössischen Technischen Hochschule Zürich) ist 1893 gegründet worden und ist ein autonomer Fachverein gemäss \mbox{§ 11 ff} der Statuten des Verbandes der Studierenden an der ETH (VSETH) und \mbox{§ 60 ff} des Schweizerischen Zivilgesetzbuches (ZGB). Er ist der Fachverein der Studierenden an den Departementen \MAVT\ sowie \ITET. Sitz des AMIV ist die Universitätsstrasse 6, 8092 Zürich.
+
+
+\paragraph{Zweck}\label{Zweck} \ \\
+Der AMIV ist politisch und konfessionell neutral, nicht gewinnorientiert und verfolgt keine kommerziellen Zwecke. Zweck des Vereins ist den Studierenden, die Integration in die Gemeinschaft der Hochschule erleichtern und sich ihrer Probleme anzunehmen.
+Dieser Zweck wird verfolgt:
+\begin{enumerate}
+  \item durch Vertretung gegenüber Lehrkörper, Hochschulgremien und -behörden,\label{HoPo}
+  \item durch Beratung in Studienfragen,\label{Beratung}
+  \item durch Vertretung gegenüber Industrie, Wirtschaft und anderen Hochschulen,\label{ER}
+  \item durch eine rasche und umfassende Information mit geeigneten Mitteln,\label{PR}
+  \item durch die Unterstützung mit Hilfsmitteln für das Studium,\label{Fileserver}
+  \item durch die Durchführung von Exkursionen,\label{Exkursionen}
+  \item durch die Veranstaltung von Vorträgen und Diskussionen,\label{Vortraege}
+  \item durch die Organisation von geselligen, sportlichen und kulturellen Anlässen.\label{Kultur}
+\end{enumerate}
+
+
+\section{Mitglieder} 
+\paragraph{Formen der Mitgliedschaft} \label{Mitglieder} \ \\
+Der Verein besteht aus
+\begin{enumerate}
+  \item ordentlichen Mitgliedern,
+  \item ausserordentlichen Mitgliedern,
+  \item Ehrenmitgliedern.
+\end{enumerate}
+
+
+\paragraph{Ordentliche Mitglieder} \ \\
+Ordentliche Mitglieder des Vereins sind automatisch alle VSETH-Mitglieder, die den Departementen \MAVT\ oder \ITET\ der ETH Zürich angehören. Der Mitgliederrat (MR) des VSETH beschliesst die Zuordnung von Studiengängen zum AMIV (§ 13 der VSETH-Statuten).
+Ordentliche Mitglieder leisten ihren Mitgliederbeitrag pro Semester direkt an den VSETH. Ausschliesslich der VSETH legt die Höhe des Beitrages fest.
+
+
+\paragraph{Ausserordentliche Mitglieder} \ \\
+Die ausserordentliche Mitgliedschaft können alle natürlichen Personen erlangen, denen die ordentliche Mitgliedschaft im AMIV nicht offensteht.Die Bewerbung als ausserordentliches Mitglied erfolgt schriftlich beim Vorstand. Eine beschlussfähige Vorstandssitzung entscheidet über die Aufnahme. Der Vorstand informiert die Generalversammlung über alle seit der letzten Generalversammlung aufgenommenen ausserordentlichen Mitglieder. Bei Nicht-Aufnahme durch den Vorstand steht dem Gesuchsteller bzw. der Gesuchstellerin das Recht auf Rekurs an der Generalversammlung zu. Diese entscheidet endgültig.
+Ausserordentliche Mitglieder leisten einen Mitgliederbeitrag von CHF 10.- pro Semester direkt an den AMIV. Bei einer Aufnahme muss der Beitrag für das laufende Semester in voller Höhe geleistet werden.
+
+
+\paragraph{Ehrenmitglieder} \ \\
+Die Ehrenmitgliedschaft können alle natürlichen Personen erlangen, die einen substanziellen Beitrag zum Vereinswesen des AMIV geliefert haben. Über die Aufnahme von Ehrenmitgliedern entscheidet die Generalversammlung mit Zweidrittelmehrheit. Anträge auf Ehrenmitgliedschaft müssen 10 (zehn) Tage vor der GV gestellt werden.
+Ehrenmitglieder haben keinen Mitgliederbeitrag zu leisten.
+
+
+\paragraph{Rechte der Mitglieder}\label{Rechte_der_Mitglieder} \ \\
+'0 Jedes ordentliche Mitglied besitzt aktives und passives Wahlrecht sowie Stimmrecht.\nl
+'S Jedes ausserordentliche Mitglied besitzt aktives und passives Wahlrecht sowie Stimmrecht, jedoch nicht das Wahlrecht für folgende Gremien (§ 13 der VSETH-Statuten):
+\begin{enumerate}[(a)]
+    \item Präsidium oder Hochschulpolitik des Fachvereinsvorstands;
+    \item FR-Delegierte
+    \item MR-Delegierte
+    \item Vertretungen des Studienganges
+\end{enumerate}
+Ausserdem besitzen diese Personen kein aktives Wahlrecht für den Fachvereinsvorstand. Im Weiteren können diese Personen nicht mehr als zwei Personen im Vorstand ausmachen. Mitglieder welche den Kategorien c, d und f, nach Art. 6 gemäss der Statuten des Verbandes der Studierenden an der ETH (VSETH), angehören und Nicht-Mitglieder besitzen für oben genannte Ämter auch kein passives Wahlrecht.
+
+'S Jedes Mitglied gemäss \ref{Mitglieder} geniesst sämtliche Vorteile des Vereins und besitzt das Antrags- sowie Vorschlagsrecht zuhanden des Vorstandes oder der Generalversammlung. Die Mitglieder haben jederzeit Einblick in die Protokolle. Sie können Revisorenberichte, Bilanzen und das Budget vor der Generalversammlung einsehen.
+
+
+\paragraph{Pflichten der Mitglieder} \ \\
+'0 Jedes Mitglied ist gehalten, alle vom Vorstand einberufenen Versammlungen zu besuchen.\nl
+'S Jedes Mitglied ist verpflichtet, die von ihm übernommenen Arbeiten genau auszuführen.\nl
+'S Jedes Mitglied ist verpflichtet, sich generell an die von offiziellen AMIV-Organen festgelegten Regeln zu halten.\nl
+'S Pflichtverletzungen können mit Ausschluss gemäss \ref{Ausschuss} geahndet werden.
+
+
+\paragraph{Ende der Mitgliedschaft} \ \\
+Die Mitgliedschaft erlischt automatisch durch
+\begin{enumerate}
+  \item Austritt aus dem VSETH (für ordentliche Mitglieder),
+  \item Nichtbezahlen des Semesterbeitrages (für ausserordentliche Mitglieder),
+  \item Ausschluss durch die Generalversammlung,
+  \item Todesfall.
+\end{enumerate}
+
+
+\paragraph{Ausschluss} \label{Ausschuss} \ \\
+Die Generalversammlung kann ein Mitglied mit Zweidrittelmehr von Ämtern, Veranstaltungen und Dienstleistungen des AMIV ausschliessen (ausgenommen sind die Sitzungen der Generalversammlung) und den zuständigen Organen des VSETH Antrag auf Ausschluss des Mitglieds aus dem VSETH stellen.
+
+
+
+\section{Vereinsvermögen}
+\paragraph{Mittel} \ \\
+Die Einnahmen des AMIV bestehen grundsätzlich aus den vom VSETH ihm zugewiesenen Mitteln. Er kann sich weitere Einnahmequellen erschliessen.
+
+
+\paragraph{Haftung} \ \\
+Für die Verbindlichkeiten des AMIV haftet ausschliesslich das Vereinsvermögen. Die Haftung der Mitglieder ist beschränkt auf den Mitgliederbeitrag.
+
+
+
+\section{Organe des Vereins}
+\paragraph{Organe}\label{Organe} \ \\
+Die Organe des Vereins sind:
+\begin{enumerate}
+  \item die Generalversammlung (GV),
+  \item der Vorstand,
+  \item die Kommissionen,
+  \item die Vertreter in hochschulpolitischen Gremien,
+  \item die Revisoren.
+  Die Generalversammlung ist das oberste Organ des Vereins. Sie ist befugt, im Rahmen seiner Statuten, über alle Belange des AMIV zu verhandeln und zu beschliessen.
+\end{enumerate}
+
+
+\subsection{Generalversammlung (GV)}
+\paragraph{Ordentliche Generalversammlung} \label{Ordentliche_Generalversammlung} \ \\
+Ordentliche Generalversammlungen finden einmal pro Semester statt. Hierzu werden die Mitglieder per E-Mail, auf der AMIV Website und per Aushang mindestens 14 (vierzehn) Tage vorher eingeladen. Die folgenden Dokumente müssen 7 (sieben) Tage vor der GV für alle Mitglieder publiziert werden:
+\begin{enumerate}[(a)]
+    \item Traktandenliste
+    \item provisorisches Budget, vorläufige Abrechnung und Zwischenrevisionsbericht (bei Herbstsemester-GVs)
+    \item komplette Abrechnung und Revisionsbericht (bei Frühjahrssemester-GVs)
+    \item alle fristgerecht eingegangenen Anträge und Änderungsanträge
+\end{enumerate}
+
+
+\paragraph{Ausserordentliche Generalversammlung} \ \\
+Der Präsident beruft eine ausserordentliche Generalversammlung ein auf Verlangen
+\begin{enumerate}
+  \item der Vorstandsmehrheit, oder
+  \item von wenigstens einem Vierzigstel aller stimmberechtigten Mitglieder, oder
+  \item des Fachvereinsrates des VSETH (FR) (§ 13 der VSETH-Statuten), oder
+  \item der Revisoren,
+\end{enumerate}
+wenn ihm ein schriftlicher Antrag vorliegt. Die Mitglieder werden dabei wie zu einer ordentlichen GV gemäss \ref{Ordentliche_Generalversammlung} eingeladen.
+
+
+\paragraph{Beschlussfähigkeit} \ \\
+'0 Jede ordnungsgemäss einberufene ordentliche GV ist beschluss- und wahlfähig.\nl
+'S Jede ordnungsgemäss einberufene ausserordentliche GV ist beschluss- und wahlfähig, wenn mindestens ein Vierzigstel der stimmberechtigten Mitglieder anwesend ist.
+
+
+\paragraph{Geschäfte} \ \\
+Die GV
+\begin{enumerate}[(a)]
+  \item genehmigt das Protokoll,
+  \item genehmigt die Rechnung,
+  \item entlastet den Vorstand,
+  \item legt das Budget fest,
+  \item wählt die Vereins-Organe gemäss \ref{Organe} für die Amtsdauer von einem Semester,
+  \item revidiert die Statuten gemäss \ref{Statuten} oder löst den Verein auf gemäss \ref{Vereinsauflösung}, und
+  \item behandelt Anträge der Mitglieder
+\end{enumerate}
+
+
+\paragraph{Antragsfristen}\label{Antragsfristen} \ \\
+'0 Budget-Anträge mit einem Gesamtaufwand über mehr als CHF 1000.-, sowie alle Änderungsanträge an das genehmigte Budget, müssen 10 (zehn) Tage vor der GV dem Vorstand schriftlich vorgelegt und begründet werden. Sofern es der aktuell gewählte Vorstand einstimmig zulässt, können diese Anträge auch direkt an der GV gestellt werden. \nl
+'S Sonstige Anträge (insbesondere Budget-Anträge mit einem Gesamtaufwand von unter CHF 1000.-) können direkt an der GV vorgetragen werden. Sie müssen vor der Abstimmung über den Antrag schriftlich eingereicht werden.
+
+
+\paragraph{Geschäftsordnung} \ \\
+Die Details zur Einberufung und dem Ablauf einer GV (namentlich alle Verfahrensregeln, die Anwendung finden) sind in der ``Geschäftsordnung der AMIV Generalversammlung''\ im Anhang A zu diesen Statuten geregelt.
+
+
+\paragraph{Protokoll} \ \\
+Alle Beschlüsse werden protokolliert. Das Protokoll muss spätestens 30 (dreissig) Tage später im offiziellen Organ des AMIV publiziert werden und gilt weitere 30 (dreissig) Tage später als provisorisch genehmigt, sofern keine schriftlichen Änderungsanträge beim Vorstand eingegangen sind.
+
+
+\subsection{Vorstand}
+\paragraph{Zusammensetzung} \ \\
+Der Vorstand setzt sich folgendermassen zusammen:
+\begin{enumerate}[(a)]
+  \item Präsident
+  \item Quästor
+  \item Ressort für Hochschulpolitik
+  \item Ressort für Information
+  \item Ressort für Kultur
+  \item Ressort für Externe Beziehungen
+  \item Ressort für Infrastruktur
+  \item Ressort für IT
+\end{enumerate}
+Ämterkumulation ist zulässig.
+
+
+\paragraph{Aufgabe} \ \\
+'0 Der Vorstand wird im Sinne des Vereinszwecks tätig. Er leitet als Exekutive den Verein, führt die Geschäfte und vollzieht die Beschlüsse der Generalversammlung. Die Realisierung der Vereinszwecke
+\begin{enumerate}[(a)]
+  \item gemäss \ref{Zweck}.\ref{HoPo} und \ref{Zweck}.\ref{Beratung} ist Sache des Ressorts für Hochschulpolitik,
+  \item gemäss \ref{Zweck}.\ref{ER} Sache des Ressorts für Externe Beziehungen,
+  \item gemäss \ref{Zweck}.\ref{PR} und \ref{Zweck}.\ref{Fileserver} Sache des Ressorts für Information,
+  \item gemäss \ref{Zweck}.\ref{Exkursionen}, \ref{Zweck}.\ref{Vortraege} und \ref{Zweck}.\ref{Kultur} Sache des Ressorts für Kultur. % TODO 2013-12: Exkursionen ins Ressort ER reinnehmen, wie es der Praxis entspricht (bei euch immernoch? :)
+\end{enumerate}
+'S Das Ressort für Infrastruktur übernimmt alle Aufgaben im Zusammenhang mit der Bewirtschaftung der Räumlichkeiten des AMIV, das Ressort IT alle Aufgaben im Zusammenhang mit der IT-Infrastruktur des AMIV.
+
+
+\paragraph{Vorstandssitzungen} \ \\
+'0 Der Vorstand hält während des Semesters mindestens einmal wöchentlich Sitzungen ab, geleitet durch den Präsidenten. Die Vorstandsmitglieder erstatten zuhanden des Präsidenten Bericht über ihre Tätigkeit seit der letzten Sitzung.\nl
+'S Der Vorstand ist beschlussfähig, wenn mindestens die Hälfte der Vorstandsmitglieder anwesend ist. Es entscheidet das absolute Mehr aller anwesenden Vorstandsmitglieder. Bei Stimmengleichheit hat der Präsident den Stichentscheid.\nl
+'S An der ersten Vorstandssitzung nach der GV ist ein Vizepräsident innerhalb des Vorstands zu wählen, welcher in Abwesenheit des Präsidenten dessen Rechte und Pflichten übernimmt. Der Vizepräsident muss ein ordentliches Mitglied sein.
+
+
+\paragraph{Pflichten der Vorstandsmitglieder} \ \\
+'0 Der Präsident vertritt den Verein nach innen und nach aussen, beruft alle Generalversammlungen und Vorstandssitzungen ein und leitet diese. Durch Beschluss der Versammlung kann die Leitung einem anderen Mitglied übertragen werden. Der Präsident hat Einsichtsrecht in alle Geschäftsbücher. Der Präsident vertritt den AMIV im Fachvereinsrat (FR) des VSETH; auf Wunsch kann er dieses Amt delegieren.\nl
+'S Der Quästor besorgt das Rechnungswesen. Die Details hierfür sind im ``Finanzreglement des AMIV''\ im Anhang B dieser Statuten geregelt.\nl
+'S Die weiteren Pflichten jedes Vorstands-Ressorts sind in einem Pflichtenheft aufgeführt, die den Statuten immer beizulegen und der GV zur Information vorzulegen sind.
+
+
+\paragraph{Zeichnungsberechtigung} \ \\
+'0 Grundsätzlich ist jedes Vorstandsmitglied zusammen mit dem Präsidenten oder dem Quästor kollektiv zu zweien zeichnungsberechtigt. Der Gesamt-Vorstand ist über geleistete Zeichnungen zu informieren.\nl
+'S Abweichende und ergänzende Regelungen betreffend der Vereinskonten sind im Anhang B ``Finanzreglement des AMIV''\ aufgeführt.
+
+
+\paragraph{Finanzkompetenz} \ \\
+'0 Ein Budgetposten kann von der GV an eine verantwortliche Person gebunden werden. Der Vorstand verfügt über die nicht personengebundenen Budgetposten.
+'S Der Vorstand hat, sofern beschlussfähig, folgende Kompetenzen:
+\begin{enumerate}
+  \item Ausserordentliche Geschäfte, welche nicht im Budget aufgeführt sind, und die einen einmaligen Gesamtaufwand bis CHF 1000.- erfordern, können in den Vorstandssitzungen genehmigt werden.
+  \item Ausserordentliche Geschäfte, welche nicht im Budget aufgeführt sind, und die einen einmaligen Gesamtaufwand bis CHF 3000.- erfordern, können in den Vorstandssitzungen genehmigt werden, falls der Quästor anwesend ist und dadurch der budgetierte Erfolg der Rechnungsperiode nicht unterschritten wird.
+  \item Der Präsident und der Quästor haben Vetorecht bei ausserordentlichen Geschäften. Dieses kann durch zwei Drittel aller gewählten Vorstände überstimmt werden.
+  \item Eine Veranstaltung gemäss \S 2.6, \S 2.7 und \S 2.8 gilt nicht als ausserordentliches Geschäft.
+\end{enumerate}
+'S Das Ressort für Kultur verfügt über den Budgetposten ``FS Event Topf''\ und ``HS Event Topf''\ . Diese Budgetposten haben die Aufgabe, kurzfristig geplante Veranstaltungen gemäss \S 2.6, \S 2.7 und \S 2.8, welche über kein eigenes Budget verfügen, zu finanzieren. Das Ressort für Kultur hat zusammen mit dem restlichen Vorstand folgende Kompetenzen:
+\begin{enumerate}
+	\item Events, welche nicht im Budget aufgeführt sind, und einen einmaligen Gesamtaufwand bis CHF 1000.- erfordern, können vom Ressort für Kultur genehmigt werden. Auf Antrag eines einzelnen Vorstands kann über das Budget des Events abgestimmt werden.
+	\item Events, welche nicht im Budget aufgeführt sind, und einen einmaligen Gesamtaufwand bis CHF 3000.- erfordern, müssen an einer beschlussfähigen Vorstandssitzung zur Genehmigung vorgestellt werden. Die Vorstandssitzung kann den Event genehmigen, falls der Quästor anwesend ist.
+	\item Der Präsident und der Quästor haben Vetorecht bei Event Budgets. Dieses kann durch zwei Drittel aller gewählten Vorstände überstimmt werden.
+\end{enumerate}
+
+
+\subsection{Kommissionen}
+\paragraph{Grundlage} \ \\
+Bei Bedarf kann die GV Kommissionen bilden, welche jeweils einem Vorstandsressort oder dem Vorstand als Ganzes unterstehen. Die GV legt für jede einzelne Kommission deren Rechte und Pflichten in einem Kommissionsreglement fest. Dieses regelt Organisation, Tätigkeit und Kompetenzen der Kommission.
+
+
+\paragraph{Organisation} \ \\
+'0 Jede Kommission hat einen gewählten Präsidenten, und für den Fall einer eigenen Rechnungsführung einen gewählten Quästor. \nl
+'S Der Kommissionspräsident orientiert den Vorstand bzw. das zuständige Vorstandsmitglied laufend über die Arbeit. Er erstattet am Ende jedes Semesters zuhanden der GV Bericht über die Tätigkeit der Kommission. \nl
+'S Kommissionen ohne eigene Rechnungsführung können einen gewählten Finanzverantwortlichen haben.
+
+
+\paragraph{Finanzen} \ \\
+Kommissionen können sich eigene Einnahmequellen erschliessen, haben jedoch grundsätzlich keine eigene Rechnungsführung. Die Rechte, Pflichten und Kompetenzen bezüglich der Finanzen von Kommissionen sind im ``Finanzreglement des AMIV''\ im Anhang B der Statuten geregelt.
+
+
+\paragraph{Auflösung} \ \\
+Kommissionen können durch die GV mit den Stimmen von zwei Dritteln der anwesenden Stimmberechtigten aufgelöst werden. Das Eigentum der Kommissionen geht bei Auflösung an den Verein über.
+
+
+\subsection{Vertreter in hochschulpolitischen Gremien}
+\paragraph{Aufgabe} \ \\
+Die Vertreter in hochschulpolitischen Gremien vertreten die Interessen des AMIV in den für die Hochschulpolitik zuständigen Gremien der Departemente D-MAVT und D-ITET sowie im Mitgliederrat (MR) des VSETH.
+
+
+\paragraph{Organisation} \ \\
+Die Aufsicht über die Vertreter haben die Vorstände im Ressort Hochschulpolitik, an diese muss durch die Vertreter auch regelmässig Bericht erstattet werden.
+
+
+\subsection{Revisoren}
+\paragraph{Aufgabe} \ \\
+Die Revisoren kontrollieren die Arbeit des Vorstandes und insbesondere das Rechnungswesen des Vereins inklusive aller Kommissionen. Sie erstatten einen Revisionsbericht mit Empfehlungen an die GV.
+
+\paragraph{Wahl} \ \\
+Zur Wahl zum Revisor dürfen sich sämtliche natürliche und juristische Personen wählen lassen, insbesondere auch ausserordentliche und Ehrenmitglieder.
+
+\paragraph{Organisation} \ \\
+Die Revisorengruppe besteht aus drei Mitgliedern. Vorstandsmitglieder können der Revisorengruppe nicht angehören. Die Revisoren können einen geschulten Buchhalter zu Rate ziehen.
+
+
+\section{Schlussbestimmungen}
+\paragraph{Vereinsauflösung}\label{Vereinsauflösung} \ \\
+Über Auflösung des Vereins entscheidet die GV. Zum Beschluss der Auflösung sind die Stimmen von wenigstens der Hälfte aller ordentlichen Mitglieder notwendig. Bei Auflösung des Vereins wird sein Eigentum dem VSETH übergeben.
+
+
+\paragraph{Statuten}\label{Statuten} \ \\
+'0 Zu den Statuten gehören folgende Anhänge. Sie unterliegen den selben Revisionsbedingungen wie die Statuten selbst.
+\begin{enumerate}
+    \item Anhang A: Geschäftsordnung der AMIV Generalversammlung
+    \item Anhang B: Finanzreglement des AMIV
+\end{enumerate}
+'S Statutenänderungen aller Art und die Annahme der geänderten Statuten können an der GV nur mit Zustimmung von zwei Dritteln der anwesenden Stimmberechtigten und unter der Voraussetzung der Präsenz von einem Vierzigstel der stimmberechtigten Mitglieder erfolgen. \nl
+'S Anträge auf Statutenänderung müssen mindestens 14 (vierzehn) Tage vor der GV schriftlich beim Vorstand eingereicht (und von diesem sofort publiziert) werden. Änderungsanträge hierzu dürfen von allen Mitgliedern bis spätestens 7 (sieben) Tage vor der GV schriftlich eingereicht und müssen vom Vorstand sofort publiziert werden. \nl
+'S Die vorliegenden Statuten sind letztmals von der ordentlichen Generalversammlung vom 09. März 2017 revidiert worden. Sie ersetzen alle früheren Statuten und treten nach Genehmigung durch die zuständigen Organe des VSETH am 18. September 2017 in Kraft.
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% GV Geschäftsordnung
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\section*{Anhang A:\\ Geschäftsordnung der AMIV Generalversammlung}
+\paragraph{Sitzungsleitung} \ \\
+Die GV wählt zu Beginn einen GV-Sitzungsleiter, der die Sitzungsleitung für die GV inne hat. Durch Beschluss der Versammlung kann jederzeit die Leitung einem anderen Mitglied übertragen werden. Bei Stimmengleichheit im relativen Mehr hat der GV-Sitzungsleiter den Stichentscheid. % TODO 2013-12: Der Stichentscheid sollte wennschon der Präsident haben und NICHT der GV Leiter, bitte ändern, das haben wir da nicht gut überlegt
+
+
+\paragraph{Stimm- und Wahlrecht} \ \\
+Es gelten die Stimm- und Wahlrechte gemäss Statuten, \ref{Rechte_der_Mitglieder}, insbesondere ist auch der Vorstand stimmberechtigt und es existiert kein Stichentscheid. % TODO 2013-12: "Es gibt keinen Stichentscheid" löschen, denn es gibt einen
+
+
+\paragraph{Traktandenliste} \ \\
+Die Traktandenliste gibt den Ablauf der GV wider. Sie orientiert sich an den folgenden Elementen:
+\begin{enumerate}
+  \item Begrüssung und Hinweis auf die Geschäftsordnung
+  \item Bestimmung der Stimmenzähler
+  \item Genehmigung der Traktandenliste
+  \item Genehmigung des Protokolls von der letzten GV
+  \item Tätigkeitsbericht des Vorstandes und der Kommissionen
+  \item (an Frühjahressemester-GVs) Vorstellung und Genehmigung der Abrechnung der vergangenen Rechnungsperiode sowie des Revisionsberichtes
+  \item (an Herbstsemester-GVs) Vorstellung einer vorläufigen Abrechnung mit dem Bericht der Zwischenrevision sowie Budget-Anträge der Mitglieder
+  \item Entlastung des Vorstandes
+  \item Vorstellung des Semester-Programms
+  \item (an Herbstsemester-GVs) Vorstellung und Genehmigung des Budgets der nächsten Rechnugsperiode
+  \item Wahlen der Vereins-Organe
+  \item Statutenänderungen
+  \item Weitere Anträge der Mitglieder
+  \item Weitere Mitteilungen der Mitglieder
+\end{enumerate}
+
+
+\paragraph{Stimmenzähler} \ \\
+'0 Der Sitzungsleiter bestimmt durch Aufruf zwei Stimmenzähler für die gesamte Dauer der GV. Die Stimmen gelten als ausgezählt, wenn beide unabhängig voneinander auf das selbe Resultat kommen. \nl
+'S Wahlen werden immer ausgezählt. Bei offensichtlichen Abstimmungsergebnissen kann auf das Auszählen der Stimmen verzichtet werden, wenn es keine Gegenrede gibt.
+
+
+\paragraph{Tätigkeitsberichte} \ \\
+Der Präsident verfasst auf Grund der Berichte der anderen Vorstandsmitglieder und der Kommissionen einen Tätigkeitsbericht über das vergangene Semester. Er gilt neben dem Revisionsbericht als Basis für die Entlastung des Vorstandes.
+
+
+\section*{Anträge}
+\paragraph{Ordnungsantrag} \ \\
+Mitglieder können Ordnungsanträge stellen auf
+\begin{enumerate}[(a)]
+  \item Abbruch der Diskussion,
+  \item Änderung von Modus und Form einer Abstimmung oder Wahl,
+  \item Wiederholung einer Abstimmung oder Wahl,
+  \item Rückkommen auf ein abgeschlossenes Traktandum,
+  \item Rückweisung von Geschäften an den Antragsteller,
+  \item Unterbruch der Sitzung, sowie
+  \item Wegweisung eines Anwesenden.
+\end{enumerate}
+
+
+\paragraph{Behandlung von Ordnungsanträgen} \ \\
+Direkt nach dem Ordnungsantrag darf ein Mitglied eine kurze Gegenrede halten, danach muss sofort über den Antrag abgestimmt werden. Wird keine Gegenrede gehalten, gilt der Antrag sofort als angenommen.
+
+
+\paragraph{Abbruch der Diskussion} \ \\
+Bei Annahme dieses Ordnungsantrags muss die laufende Diskussion sofort abgebrochen werden. Es wird einmalig eine geordnete Rednerliste erstellt. Nur Redner auf dieser Liste sowie der Vorstand dürfen im Anschluss noch über das Geschäft diskutieren, der Antragsteller hat dabei das Schlusswort.
+
+
+\paragraph{Änderung von Modus und Form einer Abstimmung oder Wahl} \ \\
+Die Art des Mehrs kann mit diesem Ordnungsantrag nicht geändert werden.
+
+
+\paragraph{Wiederholung einer Abstimmung oder Wahl} \ \\
+Dieser Ordnungsantrag muss direkt anschliessend an die anzufechtende Abstimmung oder Wahl erfolgen. Eine Abstimmung oder Wahl kann nur einmal wiederholt werden, ausser es können Verfahrensfehler geltend gemacht werden.
+
+
+\paragraph{Rückkommen auf ein abgeschlossenes Traktandum} \ \\
+Es kommen nur Geschäfte der aktuellen GV in Frage, die Genehmigung der Traktandenliste ist davon ausgeschlossen.
+
+
+\paragraph{Rückweisen von Geschäften an den Antragsteller} \ \\
+Bei Annahme wird nicht über das Geschäft abgestimmt. Das Geschäft ist damit weder angenommen noch abgelehnt.
+
+
+\paragraph{Unterbruch der Sitzung} \ \\
+Zusammen mit dem Ordnungsantrag muss eine Zeitspanne angegeben werden, für wie lange die Sitzung unterbrochen werden soll. Eine Vertagung der Sitzung ist mit diesem Ordnungsantrag nicht möglich.
+
+
+\paragraph{Wegweisung eines Anwesenden} \ \\
+Der Betroffene muss die Generalversammlung verlassen.
+
+
+\section*{Budget}
+
+\paragraph{Zeitlicher Ablauf} \ \\
+'0 Jeweils im Herbstsemester ist von der GV das Budget für das kommende Jahr festzulegen. Dieses kann im Verlauf der Budgetperiode von folgenden GVs mittels Änderungsanträgen angepasst werden. Es gelten die Fristen gemäss \ref{Antragsfristen} der Statuten.\nl
+'S Die Abrechnung der vergangenen Rechnungsperiode (Erfolgsrechnung, Bilanz und Gegenüberstellung mit dem Budget) ist jeweils im Frühjahrssemester zu präsentieren und zu genehmigen. Der Vorstand hat an der GV im Herbstsemester zudem eine vorläufige Abrechnung der laufenden Rechnungsperiode vorzulegen.
+
+\paragraph{Allgemeines} \ \\
+'0 Das an der Herbstsemester-GV zu genehmigende Budget für die nächste Rechnungsperiode hat im allgemeinen dem provisorischen Budget (publiziert mit der Ankündigung der GV) zu entsprechen. Die Mitglieder können zu jedem einzelnen Posten Änderungsanträge stellen. \nl
+'S Ein Budgetposten kann an eine verantwortliche Person gebunden werden, der Vorstand verfügt über die nicht personengebundenen Budgetposten. \nl
+'S Über das Budget wird am Ende aber im Ganzen abgestimmt. Sobald das Budget insgesamt genehmigt ist, sind keine weiteren Budget-Anträge mehr möglich.
+
+
+\paragraph{Provisorisches Budget} \ \\
+Über Abweichungen (neue oder geänderte Posten und Beträge) gegenüber dem provisorischen Budget muss der Sitzungsleiter explizit informieren. Sollte ein solcher Budgetposten einen Gesamtaufwand von 3000.- CHF übersteigen, muss dieser Änderungsantrag zum provisorischen Budget zwingend der GV vorgelegt werden.
+
+
+\section*{Abstimmungen und Wahlen}
+\paragraph{Abstimmungs- und Wahlmodi} \ \\
+'0 Die Stimmabgabe erfolgt durch Handaufheben. Auf Antrag eines Mitglieds sind einzelne Abstimmungen geheim vorzunehmen. \nl
+'S Sofern die Statuten keinen anderen Modus vorsehen, gelten folgende Regeln:
+\begin{enumerate}[(a)]
+    \item Allgemeine Beschlüsse werden durch das absolute Mehr aller anwesenden Stimmberechtigten gefällt
+    \item Bei inkompatiblen Anträgen und Änderungsanträgen wird zunächst über jeden separat abgestimmt
+    \item Das Ausmehren angenommener inkompatibler Anträge und Änderungsanträge gegeneinander unterliegt dem relativen Mehr
+\end{enumerate}
+
+
+\paragraph{Wahl der Vereinsorgane} \ \\
+Präsident und Quästor werden jeweils einzeln gewählt. Die Wahl der übrigen Vereinsorgane erfolgt jeweils im Block und mit absolutem Mehr der Stimmen. Auf Antrag eines Mitglieds können Einzelwahlen erfolgen.
+
+% TODO  ändern auf "Anwesende Stimmberechtigte", das ging bei der Revision 2013-10 vergessen
+\paragraph{Präsidium und Quästor} \ \\
+Die Wahl des Präsidenten und des Quästors erfolgt im ersten Wahlgang mit Zweidrittelmehrheit aller abgegebenen Stimmen. Im zweiten Wahlgang entscheidet das relative Mehr zwischen den zwei Kandidaten, die im ersten Wahlgang am meisten Stimmen erhalten haben.
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Finanzreglement
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+\section*{Anhang B:\\ Finanzreglement des AMIV}
+\section*{Grundsätze}
+\paragraph{Einleitung} \ \\
+Das Finanzreglement setzt die Finanzkompetenzen der einzelnen ausführenden Organe und Kommissionen des AMIV fest. Als Basis für alle in diesem Reglement definierten Vorgänge gilt das von der Generalversammlung genehmigte Budget. Es setzt insbesondere die Rechte, Pflichten und Kompetenzen der Quästoren und Finanzverantwortlichen des AMIV und der Kommissionen fest.
+
+
+\paragraph{Rechnungsperiode} \ \\
+Die Budget- und Rechnungsperiode für den AMIV und alle seine Kommissionen ist das Kalenderjahr. Der im folgenden als steuerrelevante Periode verwendete Begriff orientiert sich jeweils an der für die jeweilige Steuer gesetzlich vorgesehenen Abrechnungsfrist.
+
+
+\paragraph{Allgemeine Bestimmungen und Zeichnungsberechtigung auf Konten} \ \\
+'0 Der von der GV gewählte Präsident und Quästor des AMIV besitzen Einzelzeichnungsrecht auf sämtliche Vereinskonten.\nl
+'S Präsidenten und Quästoren von Kommissionen mit eigener Rechnungsführung haben Einzelzeichnungsrecht auf den für die Kommission relevanten Vereinskonten.\nl
+'S Präsidenten und Finanzverantwortliche von Kommissionen ohne eigene Rechnungsführung haben auf Wunsch Kollektivzeichnungsrecht auf den für die Kommission relevanten Vereinskonten. Sämtliche Transaktionen müssen durch den Präsidenten oder den Quästor des AMIV gegengezeichnet werden.\nl
+'S Zusätzliche Kollektiv-Zeichnungsberechtigungen auf Konten sind durch Vorstandsbeschluss möglich.\nl
+'S Für einzelne Geschäfte kann einem Mitglied des Vorstands durch Beschluss der Vorstandssitzung die Zeichnungsberechtigung für einzelne Geschäfte gewährt werden.
+
+\paragraph{Pflichten des AMIV Quästors} \ \\
+'0 Der Quästor ist für die Buchführung des AMIV und der Kommissionen ohne eigene Rechnungsführung verantwortlich, stellt den Eingang der Debitoren sicher und verwaltet die Mittel des AMIV. Er hat sich an die allgemein gültigen und gesetzlichen Vorschriften für die doppelte Buchführung zu halten.\nl
+'S Jeweils zum Ende einer steuerrelevanten Periode ist die Rechnung von Kommissionen mit eigener Rechnungsführung zu revidieren und für die Steuerdeklaration mit der Gesamtrechnung des AMIV zu konsolidieren.\nl
+'S Zum Ende der Rechnungsperiode ist die Vereinsrechnung abzuschliessen und die Bilanz inklusive der Kommissionen mit eigener Rechnungsführung aufzustellen.\nl
+'S Des weiteren ist er für die Einhaltung der gesetzlichen Aufbewahrungspflichten für die Buchhaltung verantwortlich.
+
+
+\paragraph{Pflichten der Kommissionen und der Kommissionsquästoren} \ \\
+Es gelten folgende Bestimmungen: \nl % TODO 2013-12: Der Teil "Es gelten folgende Bestimmungen" gehört gestrichen. Kleine Ã„nderung, die durch die GV muss
+'0 Die Kommissionen haben frühzeitig vor einer GV ein Budget für die folgende Rechnungsperiode beim Vorstand einzureichen, welches nach Prüfung durch den Vorstand in das Gesamtbudget zu integrieren ist.\nl
+'S Unaufgeschlüsselte Sammelbuchungen oder Verrechnungen dürfen nicht vorgenommen werden.\nl
+'S Für jeden einzelnen Geschäftsvorfall ist ein Beleg zu erstellen. Die Belege sind zu nummerieren und mit Buchungssatz zu versehen.
+
+
+\section*{Kommissionen ohne eigene Rechnungsführung}
+\paragraph{Grundsätze} \ \\
+Kommissionen haben grundsätzlich keine eigene Rechnungsführung. Diese wird in der Hauptbuchhaltung durch den Quästor des AMIV getätigt. Kommissionspräsidenten und Finanzverantwortliche (wenn vorhanden) können auf Wunsch Einblick in die Buchhaltung erhalten um die Rechnung der Kommission zu kontrollieren und Rechnungen im Namen der Kommission stellen zu können.
+
+
+\paragraph{Bankkonten} \ \\
+Die Zahlungsabwicklung von Kommissionen wird grundsätzlich über den AMIV-Quästor und das Hauptkonto des AMIV abgewickelt. In begründeten Fällen kann Kommissionen durch Vorstandsbeschluss ein eigenes Konto erlaubt werden.
+
+
+\paragraph{Eigenkapital} \ \\
+'0 Von der GV Kommissionen zugesprochenes Budget verfällt automatisch zum Ende der Rechnungsperiode. Auf begründeten Antrag beim Vorstand kann nicht benötigtes Budget zum Ende der Rechnungsperiode in Kapital der Kommission umgewandelt werden. Dieses wird als Unterkonto des gesamten Eigenkapitals des AMIV geführt. Der Antrag ist vor Ablauf der betroffenen Rechnungsperiode zu stellen.\nl
+'S Überzieht eine Kommission ihr Budget, wird die Differenz vom Eigenkapital der Kommission abgezogen. Veränderungen am Kapital von Kommissionen müssen der GV zur Information vorgelegt werden.
+
+
+\section*{Kommissionen mit eigener Rechnungsführung}
+\paragraph{Antrag auf eigene Rechnungsführung} \ \\
+'0 Kommissionen können durch Beschluss der GV eine eigene Rechnungsführung erhalten. Dies kann durch den Kommissionspräsidenten oder den AMIV-Quästor beantragt werden. Ebenfalls können die erwähnten Personen beantragen, dass die Rechnung einer Kommission wieder durch den AMIV-Quästor geführt wird. Beide Arten von Anträgen müssen zehn Tage vor der GV dem Vorstand schriftlich vorgelegt und begründet werden. Bei Neugründung von Kommissionen kann eine eigene Rechnungsführung auch direkt an der GV beantragt werden. Beschlossene Änderungen bezüglich der Rechnungsführung treten jeweils zum Ende der Rechnungsperiode in Kraft.\nl
+'S Der AMIV-Quästor und die Revisoren haben der GV zu jedem Antrag auf eigene oder zentrale Rechnungsführung eine Empfehlung zu dessen Annahme oder Ablehnung vorzulegen.
+
+
+\paragraph{Grundsätze der Rechnungsführung für Kommissionen}\label{Grundsaetze_Rechnung_Kommissionen} \ \\
+Die Rechnungsführung hat nach den allgemein gültigen, gesetzlichen buchhalterischen Vorschriften (doppelte Buchhaltung) und Vorgaben des AMIV-Quästors zu erfolgen. Dies betrifft insbesondere auch die zu verwendende Buchhaltungssoftware, Kontenplan, Belegaufbewahrung sowie sämtliche steuerrelevanten Vorgänge.
+
+
+\paragraph{Weitere Pflichten eines Kommissionsquästors} \ \\
+Neben den in \ref{Grundsaetze_Rechnung_Kommissionen} definierten Pflichten ist jeweils zum Ende einer steuerrelevanten Periode die Rechnung der Kommission abzuschliessen und dem Quästor des AMIV zur Zwischenrevision vorzulegen. Hierbei sind auch sämtliche Belege der vergangenen steuerrelevanten Periode geordnet an den Quästor des AMIV zu übergeben. Diese Regelung ist auch für die Deklaration der Mehrwertsteuern anzuwenden.
+
+
+\paragraph{Revision} \ \\
+Die Rechnungen der Kommissionen mit eigener Rechnungsführung werden durch den Quästor des AMIV und die Revisoren geprüft.
+
+\end{document} 
