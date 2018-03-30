@@ -22,5 +22,5 @@ Pandoc is being used to generate the HTML output. Installation instructions are 
 ### Generate Output
 
 ```bash
-<to be filled>
+pandoc -o output/amiv-statuten.html amiv-statuten.tex 
 ```
