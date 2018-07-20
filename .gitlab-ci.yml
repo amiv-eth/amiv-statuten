@@ -1,0 +1,26 @@
+stages:
+  - build
+  - deploy
+
+# verify that build works
+build:
+  stage: build
+  image: debian
+  before_script:
+    - apt-get -q update && apt-get install -y wget
+    # Install pandoc
+    - wget -O pandoc-amd64.deb https://github.com/jgm/pandoc/releases/download/2.2.2.1/pandoc-2.2.2.1-1-amd64.deb
+    - dpkg -i pandoc-amd64.deb
+    - rm pandoc-amd64.deb
+  script:
+    - pandoc -o output/statutes.html amiv-statuten.tex
+
+deploy:
+  stage: deploy
+  image: debian
+  before_script:
+    - apt-get -q update && apt-get install -y curl git
+  script:
+    - sh deploy-website.sh
+  only:
+    - master
